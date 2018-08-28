@@ -38,11 +38,13 @@ public class Program
 		int _amplitud = _rango / Int32.Parse(String.Concat(Math.Round(_k)));
 		Console.WriteLine("valor del amplitud: '"+_amplitud+"'");
 		
-		for(int j=_nMinor,i=0; i<_k; i++){
-			Console.Write("["+j);
-			j += (_amplitud-1);
-			Console.Write(","+j+")\n");
-			j++;
+		int a = _nMinor;
+		Console.Write("intervalos | ");
+		for(int i=0; i<_k; i++){
+			Console.Write("["+a);
+			a += (_amplitud-1);
+			Console.Write(","+a+") | ");
+			a++;
 		}
 		
 	}
